@@ -1,10 +1,11 @@
 title: "ICSCRM 2026 — SiC Superjunction"
 source_type: tutorial
+source_pack: "Harada — Next Generation SiC Power Devices"
 evidence_policy:
-  tutorial_direct: "Explicitly supported by the tutorial"
+  tutorial_direct: "Explicitly supported by the ICSCRM 2026 tutorial"
   tutorial_derived: "Engineering synthesis derived from tutorial content"
   engineering_model: "Simplified model; not design sign-off"
-  frontier: "Requires primary-source verification"
+  frontier: "Requires primary-source or official-source verification"
 sections:
   - id: charge_balance
     title: "Charge balance"
@@ -18,22 +19,36 @@ sections:
     title: "Process routes"
     evidence: tutorial_direct
     items:
-      - "High-energy channeling implantation: advantageous from a process-cycle-time perspective."
+      - "Channeling implantation is advantageous from a process-cycle-time perspective."
       - "Trench filling becomes more attractive as columns become deeper."
-  - id: ruggedness
-    title: "Beyond Ron"
+  - id: bipolar_degradation
+    title: "Double-implanted SJ-UMOS bipolar degradation"
     evidence: tutorial_direct
+    tutorial_pdf_page: 137
+    tutorial_slide: 30
+    reference: "K. Takenaka, et al., Jpn. J. Appl. Phys. 64, 02SP43 (2025)."
     items:
-      - "High-temperature on-resistance"
-      - "Reverse recovery"
-      - "Forward-current tolerance"
-      - "Short-circuit capability"
-      - "Avalanche capability"
+      - "UMOS: ΔVf = 21.2%"
+      - "SI-SJUMOS: ΔVf = 5.9%"
+      - "DI-SJUMOS: maximum ΔVf = 0.48%"
+      - "Tutorial states that Al and P double implantation introduces many point defects."
+  - id: dynamic_incomplete_ionization
+    title: "Dynamic incomplete ionization"
+    evidence: tutorial_direct
+    tutorial_pdf_page: 142
+    tutorial_slide: 36
+    items:
+      - "Delayed ionization causes a temporary charge imbalance in the p-column during turn-off transients."
+      - "High doping concentration degrades ionization ratio and mobility in the n-column; a lightly doped, wider asymmetric n-column is presented as preferable."
+      - "Delayed ionization is associated with soft reverse recovery of the body diode."
+    references:
+      - "D. Nazareno, et al., IEEE Trans. Electron Devices 65, 4469 (2018)."
+      - "D. Iizasa, et al., Semicond. Sci. Technol. 40, 125010 (2025)."
+      - "T. Tawara, et al., Mater. Sci. Semicond. Process. 176, 108324 (2024)."
   - id: high_voltage
     title: "High-voltage direction"
     evidence: tutorial_direct
     note: "As SJ processing becomes increasingly difficult at higher voltage, SiC IGBT is highlighted as promising for the 10 kV class and above."
 pending_verification:
-  - "Dynamic incomplete ionization during fast turn-off"
-  - "Exact four-route process-cycle comparison values"
-  - "Al + P co-implantation and claimed 0.48% degradation figure"
+  - "Exact quantitative cycle-time comparison across Multi-epi / trench filling / high-energy implantation / channeling implantation."
+  - "Cross-vendor channel plane, corner shielding topology, Vth strategy and recommended gate-drive windows."
