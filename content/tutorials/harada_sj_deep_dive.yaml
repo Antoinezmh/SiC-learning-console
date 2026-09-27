@@ -56,6 +56,25 @@ nodes:
       - "Delayed p-column ionization causes temporary charge imbalance during turn-off."
       - "High n-column doping degrades ionization ratio and mobility; asymmetric lightly doped/wider n-column is proposed."
       - "Delayed ionization is linked to soft body-diode reverse recovery."
+  - id: process_cycle_time
+    evidence: tutorial_direct
+    pdf_pages: [121, 122]
+    title: "Normalized process cycle time"
+    facts:
+      - "Definition: total processing time from wafer loading to unloading; not a cost figure and equipment depreciation is excluded."
+      - "1.2 kV / 5 µm: non-SJ 1.00; multi-epi 0.75 (8 layers); trench filling 0.23; MeV implantation 0.20 (5 MeV / 2 layers); channeling implantation 0.08 (5 MeV)."
+      - "3.3 kV / 10 µm: non-SJ 1.00; multi-epi 1.50 (16 layers); trench filling 0.29; MeV implantation 0.45 (5 MeV / 4 layers); channeling implantation 0.21 (5 MeV / 2 layers)."
+      - "Channeling implantation gives the shortest process flow; trench filling becomes more advantageous as columns deepen."
+  - id: fabrication_constraints
+    evidence: tutorial_direct
+    pdf_pages: [117, 120]
+    title: "Trench-fill and channeling constraints"
+    facts:
+      - "HCl suppresses trench-fill void formation by minimizing mesa over-growth."
+      - "Accurate [11-20] alignment suppresses tilted growth; precise orientation-flat control is required."
+      - "5 MeV Al channeling along <0001> reaches much deeper than random implantation at the same energy."
+      - "Precise crystal-axis alignment is required for channeling."
+
 web_research:
   - evidence: external_research
     title: "ME vs TFE fabrication"
