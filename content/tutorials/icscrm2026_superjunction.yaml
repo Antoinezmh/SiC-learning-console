@@ -1,0 +1,39 @@
+title: "ICSCRM 2026 — SiC Superjunction"
+source_type: tutorial
+evidence_policy:
+  tutorial_direct: "Explicitly supported by the tutorial"
+  tutorial_derived: "Engineering synthesis derived from tutorial content"
+  engineering_model: "Simplified model; not design sign-off"
+  frontier: "Requires primary-source verification"
+sections:
+  - id: charge_balance
+    title: "Charge balance"
+    evidence: engineering_model
+    equations:
+      - "Q_N = q N_D W_N"
+      - "Q_P = q N_A^- W_P"
+      - "delta_Q = (Q_N - Q_P) / Q_N"
+    note: "Effective ionized acceptor density should be distinguished from nominal Al concentration."
+  - id: process_routes
+    title: "Process routes"
+    evidence: tutorial_direct
+    items:
+      - "High-energy channeling implantation: advantageous from a process-cycle-time perspective."
+      - "Trench filling becomes more attractive as columns become deeper."
+  - id: ruggedness
+    title: "Beyond Ron"
+    evidence: tutorial_direct
+    items:
+      - "High-temperature on-resistance"
+      - "Reverse recovery"
+      - "Forward-current tolerance"
+      - "Short-circuit capability"
+      - "Avalanche capability"
+  - id: high_voltage
+    title: "High-voltage direction"
+    evidence: tutorial_direct
+    note: "As SJ processing becomes increasingly difficult at higher voltage, SiC IGBT is highlighted as promising for the 10 kV class and above."
+pending_verification:
+  - "Dynamic incomplete ionization during fast turn-off"
+  - "Exact four-route process-cycle comparison values"
+  - "Al + P co-implantation and claimed 0.48% degradation figure"
