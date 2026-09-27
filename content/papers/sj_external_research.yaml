@@ -1,0 +1,19 @@
+title: "SiC SJ external research watchlist"
+evidence: external_research
+papers:
+  - year: 2024
+    topic: "Multi-epi vs trench-filling"
+    citation: "T. Morimoto, T. Kato, K. Kojima, S. Harada, IEEJ Trans. EIS 144, 257–262 (2024)"
+    doi: "10.1541/ieejeiss.144.257"
+  - year: 2024
+    topic: "Reverse recovery / column design"
+    citation: "T. Tawara et al., Mater. Sci. Semicond. Process. 176, 108324 (2024)"
+    doi: "10.1016/j.mssp.2024.108324"
+  - year: 2024
+    topic: "Avalanche robustness"
+    citation: "D.-X. Chen et al., Microelectronics Reliability 157, 115418 (2024)"
+    doi: "10.1016/j.microrel.2024.115418"
+  - year: 2024
+    topic: "Schottky-assisted SC/reverse recovery ruggedness"
+    citation: "W. Cao et al., Micro and Nanostructures 191, 207847 (2024)"
+    doi: "10.1016/j.micrna.2024.207847"

@@ -1,0 +1,71 @@
+title: "Harada ICSCRM 2026 — SiC SJ Deep Dive"
+source: "ICSCRM2026_Tutorial.pdf"
+scope: "PDF pp.125–142 / Harada slides 19–35"
+nodes:
+  - id: structures_1p2kv
+    evidence: tutorial_direct
+    pdf_pages: [125]
+    title: "1.2 kV structure taxonomy"
+    facts: ["non-SJ", "semi-SJ", "full-SJ", "TFE-SJ", "multi-epi and trench-filling fabrication are compared"]
+  - id: ron_temperature
+    evidence: tutorial_direct
+    pdf_pages: [126,127,128]
+    title: "RonA and temperature"
+    facts:
+      - "RonA temperature rise is suppressed in SJ-UMOSFET."
+      - "3.3 kV example: 3.3 mΩ·cm² at RT and 6.2 mΩ·cm² at 175°C."
+      - "At 3.3 kV, Short-SJ still shows 40% reduction vs non-SJ in the tutorial example."
+      - "1.2 kV SJ-VMOSFET example reaches 0.63 mΩ·cm² combined with high channel mobility on (0-33-8) face."
+  - id: reverse_recovery
+    evidence: tutorial_direct
+    pdf_pages: [129,130,131,132]
+    title: "Reverse recovery and lifetime"
+    facts:
+      - "ME-SJ shows small Qrr and negligible surge voltage in the cited example."
+      - "Multi-epi implantation damage reduces carrier lifetime."
+      - "At 175°C, multi-epi SJ shows reduced Qrr current dependence."
+      - "Tutorial interprets implantation damage as lifetime control that can reduce switching loss."
+  - id: bipolar_degradation
+    evidence: tutorial_direct
+    pdf_pages: [134,135,136]
+    title: "Bipolar degradation"
+    facts:
+      - "UMOS ΔVf = 21.2%; SI-SJUMOS = 5.9%; DI-SJUMOS = 0.48% max."
+      - "MeV-SJ suppresses bipolar degradation more effectively than multi-epi SJ in the cited comparison."
+      - "Implantation energy and ion mass are highlighted as important."
+  - id: short_circuit
+    evidence: tutorial_direct
+    pdf_pages: [137,138,139]
+    title: "Short-circuit ruggedness"
+    facts:
+      - "Semi-SJ tSC = 15.0 μs vs UMOS 13.0 μs in the cited example: about 15% longer."
+      - "Tutorial reports improved RonA–ESC trade-off, with larger SJ advantage at 175°C."
+      - "Deep electric-field peak moves the hot spot deeper from the surface metal."
+  - id: avalanche
+    evidence: tutorial_direct
+    pdf_pages: [140]
+    title: "Avalanche"
+    facts:
+      - "3.3 kV-class SiC SJ example reaches avalanche current density of 1000 A/cm²."
+      - "Improved JTE example reaches EAS about 13 J/cm²."
+  - id: incomplete_ionization
+    evidence: tutorial_direct
+    pdf_pages: [141]
+    title: "Dynamic incomplete ionization"
+    facts:
+      - "Delayed p-column ionization causes temporary charge imbalance during turn-off."
+      - "High n-column doping degrades ionization ratio and mobility; asymmetric lightly doped/wider n-column is proposed."
+      - "Delayed ionization is linked to soft body-diode reverse recovery."
+web_research:
+  - evidence: external_research
+    title: "ME vs TFE fabrication"
+    finding: "A 2024 AIST/Harada comparison reports comparably low Ron,sp and switching losses for 1.2 kV SJ-MOSFETs fabricated by multi-epi and trench-filling epi; TFE is framed as a lower-process-cost route."
+    doi: "10.1541/ieejeiss.144.257"
+  - evidence: external_research
+    title: "SJ avalanche robustness"
+    finding: "2024 TCAD work attributes UIS burnout to parasitic-BJT-driven current/temperature crowding and explores layered charge imbalance to widen avalanche/process tolerance."
+    doi: "10.1016/j.microrel.2024.115418"
+  - evidence: external_research
+    title: "SJ + Schottky ruggedness"
+    finding: "2024 TCAD work explores asymmetric SJ plus N/P Schottky barriers to improve short-circuit and reverse-recovery ruggedness."
+    doi: "10.1016/j.micrna.2024.207847"
