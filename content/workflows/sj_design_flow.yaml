@@ -1,0 +1,23 @@
+title: "SJ Design Flow & TCAD Copilot"
+stages:
+  - "Requirement: target BV / temperature / route"
+  - "Physics initializer: column length / width / doping"
+  - "Ron budget: channel + JFET + SJ drift + substrate + other"
+  - "Charge balance / process variation"
+  - "Risk radar: evidence-aware, no fake universal score"
+  - "TCAD DOE: 3 factors x 3 levels = 27 runs"
+  - "Convergence / extraction: BV, Ron, field, ionization, SC hotspot"
+evidence:
+  parasitic_resistance:
+    status: tutorial_direct
+    source: "Harada slide 7 / PDF p.113"
+    facts:
+      - "Rch = 0.04 mOhm cm2 under tutorial assumptions"
+      - "mu_ch = 200 cm2/Vs; Tox = 60 nm; Lch = 0.5 um; Lcell = 3 um; Vg = 20 V; Vth = 4 V"
+      - "Rsub = 0.1 mOhm cm2 from 10 mOhm cm x 100 um"
+  geometry_defaults:
+    status: engineering_model
+    note: "Route-specific Wn defaults are design seeds only, not tutorial recommendations."
+  doe:
+    status: engineering_model
+    note: "3-level full-factorial DOE is a generic engineering starting point; replace levels with fab distributions."
