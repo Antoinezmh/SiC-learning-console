@@ -1,0 +1,8 @@
+{
+  "name": "SiC Superjunction reference model",
+  "version": "0.1",
+  "charge_ratio_default": 1.0,
+  "charge_ratio_range": [0.8, 1.2],
+  "temperature_range_C": [25, 200],
+  "warning": "Engineering teaching model only. No calibrated BV-vs-imbalance law is asserted."
+}
