@@ -1,0 +1,43 @@
+title: "SJ Process Route Comparator"
+routes:
+  Multi-epi:
+    tutorial_direct:
+      cycle_5um: 0.75
+      cycle_10um: 1.50
+    fab_interpretation:
+      tool_family: "SiC epitaxy + implantation; repeated epi/implant modules"
+      risks: ["epi tool occupancy", "layer-to-layer dose/depth accumulation", "compound yield across repeated modules"]
+      capex_level: "existing-line friendly to medium"
+  TFE:
+    tutorial_direct:
+      cycle_5um: 0.23
+      cycle_10um: 0.29
+      constraints: ["HCl suppresses mesa over-growth / void formation", "accurate [11-20] trench alignment"]
+    external_literature:
+      note: "Published SiC TFE literature confirms high-aspect-ratio trench filling, HCl/chlorinated chemistry sensitivity, geometry sensitivity and crystallographic-direction sensitivity."
+    fab_interpretation:
+      tool_family: "deep SiC trench etch + chlorinated high-temperature epitaxy + planarization integration"
+      risks: ["void/pinch-off", "sidewall/facet control", "trench direction", "post-fill topography"]
+      capex_level: "high integration burden"
+  MeV implantation:
+    tutorial_direct:
+      cycle_5um: 0.20
+      cycle_10um: 0.45
+    fab_interpretation:
+      tool_family: "high-energy ion implantation + activation"
+      risks: ["implant damage", "activation", "multi-energy/depth control"]
+      capex_level: "specialized high-energy tool"
+  Channeling:
+    tutorial_direct:
+      cycle_5um: 0.08
+      cycle_10um: 0.21
+      constraints: ["precise crystal-axis alignment required"]
+    fab_interpretation:
+      tool_family: "high-energy implantation with crystallographic alignment control"
+      risks: ["wafer/orientation alignment", "warp/bow sensitivity hypothesis", "range uniformity"]
+      capex_level: "specialized; exact production-tool qualification pending"
+evidence_notes:
+  - "Cycle-time anchors are tutorial direct and are not cost figures."
+  - "3–25 um curves outside 5 and 10 um are engineering extrapolations, not tutorial measurements."
+  - "CapEx labels are qualitative engineering assessments; no purchase-price or depreciation model is implied."
+  - "No vendor/tool model or <=0.1 degree capability is asserted without official-source verification."
