@@ -3,4 +3,9 @@ __pycache__/
 .venv/
 .env
 sources/*.pdf
+References/*.pdf
+data/abstracts.jsonl
+data/paper_facts.jsonl
+data/signals.jsonl
+data/chroma/
 .DS_Store

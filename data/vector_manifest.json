@@ -1,0 +1,13 @@
+{
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "collection": "sic_corpus",
+  "count": 4089,
+  "kinds": {
+    "abstract": 3552,
+    "brief": 499,
+    "process_card": 16,
+    "principle": 6,
+    "summary": 8,
+    "process_board": 8
+  }
+}

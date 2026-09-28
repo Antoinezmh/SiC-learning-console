@@ -1,4 +1,6 @@
 import streamlit as st
+from sic_ui import inject_styles
+inject_styles()
 import numpy as np
 import plotly.graph_objects as go
 st.title("🧮 Engineering Tools")

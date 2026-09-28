@@ -1,8 +1,38 @@
+"""Sunday 27 Sep 2026 tutorial, kept as lectures rather than wafer-process steps."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
 import streamlit as st
-st.title("📚 ICSCRM 2026 Tutorial Pack")
-talks={"Kimoto — Fundamentals":"Material/device physics; bulk/epi; lifetime; extended defects; MOS transport.","Friedrichs — Power Electronics":"Efficiency, density and system architecture.","Harada — Next Generation Devices":"Superjunction routes, high-voltage devices, emerging architectures.","Grossner — Degradation":"Defect kinetics, oxide traps, BTI/GSI.","Takahashi — Modules":"Thermal, bonding, low-L integration, gate drive."}
-for k,v in talks.items():
-    with st.expander(k):st.write(v);st.caption("🟢 Tutorial direct")
-st.code("Ron,sp = 2.8×10⁻¹¹ × VB^2.28  [Ω·cm²], VB in V")
-st.write("PVT: source ~2300–2500°C; seed ~2200–2400°C; ~0.5–2 kPa; ~0.3–1 mm/h. 🟢")
-st.write("Epitaxy: ~1600–1750°C; 3–20 kPa; ~10–30 μm/h. 🟢")
+
+from sic_ui import badge, hero, inject_styles, section
+
+ROOT = Path(__file__).resolve().parents[1]
+DAY = json.loads((ROOT / "data" / "tutorial_sunday.json").read_text(encoding="utf-8"))
+
+inject_styles()
+hero(
+    "27 Sep 2026",
+    "周日教程",
+    DAY["note"],
+    meta_html=DAY["place"],
+)
+
+section("上午", "fundamentals and systems")
+for talk in DAY["morning"]:
+    with st.container(border=True):
+        st.markdown(badge("ok", "🟢 教程") + f"  **{talk['who']} · {talk['title']}**", unsafe_allow_html=True)
+        st.markdown(talk["scope"])
+        st.markdown(talk["holds"])
+        st.caption(talk["boundary"])
+
+section("下午", "devices, degradation, modules")
+st.caption("后半段三讲各自成篇。器件结构、退化机理、模块回路，不并进当前的晶圆工艺合格线。")
+for talk in DAY["afternoon"]:
+    with st.container(border=True):
+        st.markdown(badge("info", "讲座范围") + f"  **{talk['who']} · {talk['title']}**", unsafe_allow_html=True)
+        st.markdown(talk["scope"])
+        st.markdown(talk["holds"])
+        st.caption(talk["boundary"])
